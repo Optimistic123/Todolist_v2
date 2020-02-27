@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 //const items = ["Buy Food", "Cook Food", "Eat Food"];
 
-mongoose.connect("mongodb://localhost:27017/todolistDB",{useNewUrlParser:true,useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect("mongodb+srv://admin-manish:asd123@cluster0-gg3qb.mongodb.net/todolistDB",{useNewUrlParser:true,useUnifiedTopology: true, useFindAndModify: false});
 //const workItems = [];
 
 const itemSchema = {
@@ -149,11 +149,11 @@ app.post("/delete",function(req,res){
 //   res.render("about");
 // });
 
-app.listen(3000, function() {
+app.listen(process.eve.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
 
-
+// process.eve.PORT--- by this heroku can decide which port to take otherwise port 30000
 // This is dynamic todolist 
 // u can make any listName with any name
 // data remain store
