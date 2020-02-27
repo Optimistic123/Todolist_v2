@@ -149,11 +149,13 @@ app.post("/delete",function(req,res){
 //   res.render("about");
 // });
 
-app.listen(process.eve.PORT || 3000, function() {
+app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
 
-// process.eve.PORT--- by this heroku can decide which port to take otherwise port 30000
+
+
+
 // This is dynamic todolist 
 // u can make any listName with any name
 // data remain store
